@@ -16,12 +16,15 @@ interface Event {
 
 const App = () => {
   const events: Event[] = [
-    // 示例数据（可选）
-    // { id: 1, name: '音乐会A', date: '2025-04-05', location: '上海' }
+    { id: 1, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"},
+    { id: 2, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"},
+    { id: 3, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"}
   ];
 
   const musicEvents: Event[] = [
-    // 可以同样定义类型，此处省略
+      { id: 1, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"},
+      { id: 2, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"},
+      { id: 3, name: '音乐会A', date: '2025-04-05', location: '上海', "title": "音乐会A", "image": "image/50.jpeg"}
   ];
 
   return (

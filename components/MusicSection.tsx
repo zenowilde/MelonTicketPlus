@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import {renderImageSource} from "../utils/Common.ts";
 
 // 定义单个音乐事件的类型
 interface MusicEvent {
@@ -26,7 +27,7 @@ const MusicSection: React.FC<MusicSectionProps> = ({ musicEvents }) => (
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (
         <View style={styles.eventCard}>
-          <Image source={{ uri: item.image }} style={styles.eventImage} />
+          <Image source={renderImageSource(item.image)} style={styles.eventImage} />
           <Text style={styles.eventTitle}>{item.title}</Text>
           <Text style={styles.eventDate}>{item.date}</Text>
         </View>

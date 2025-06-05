@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import {renderImageSource} from "../utils/Common.ts";
 
 // 定义事件对象的类型
 interface EventItem {
@@ -23,7 +24,7 @@ const RecommendedEventsSection: React.FC<RecommendedEventsSectionProps> = ({ eve
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (
         <View style={styles.eventCard}>
-          <Image source={{ uri: item.image }} style={styles.eventImage} />
+          <Image source={renderImageSource(item.image)} style={styles.eventImage} />
           <Text style={styles.eventTitle}>{item.title}</Text>
           <Text style={styles.eventDate}>{item.date}</Text>
         </View>
